@@ -36,7 +36,7 @@ const app = express();
 const onBaseDb = async () => {
   try {
     conexionBaseDatos();
-    dotenv.config();Ñ
+    dotenv.config();
     } catch (error) {
     console.log(`Base de datos no conectada: ${error}`);
   }

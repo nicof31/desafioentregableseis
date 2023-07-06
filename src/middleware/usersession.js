@@ -8,10 +8,10 @@ export function sessionExist(req, res, next) {
   }
 }
 
-export function auth(req, resp, next) {
+export function auth(req, res, next) {
   try {
     if (req.session?.email) next();
-    else return resp.redirect("/login");
+    else return res.redirect("/login");
   } catch (error) {
     console.error("Error al verificar la autenticación de sesión:", error);
     res.status(500).send({ error: "Ocurrió un error al verificar la autenticación de sesión" });
